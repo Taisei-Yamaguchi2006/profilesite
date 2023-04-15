@@ -5,54 +5,38 @@
     <title>Progate</title>
   </head>
   <body>
-    <h1 class="title">ーのホームページ</h1> 
-    【研究テーマ】<br>
+    <h1 class="title">山口 泰成/Taisei Yamaguchiのホームページ</h1> 
+    【所属】函館工業高等専門学校1年<br>
+　　【興味対象】理論物理学 
     -------学内関係者向け-------
-    <html lang="ja">
+  <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
-<meta http-equiv="Content-Script-Type" content="text/javascript">
 <title>サンプル</title>
-<script type="text/javascript">
+<script type = "text/javascript">
 <!--
-function secret() {
-	if (confirm("よろしいですか？")) {
-		var id = document.form1.id.value;
-		var passwd = document.form1.passwd.value;
-		var pass = unescape("%68%69%6D%69%74%75");
 
-		if (id.length > 3 && pass == passwd) {
-			location.replace("./test/" + id +".html");
-		}
-		else {
-			alert("ID パスワードを確認してください。");
-		}
-	}
+function matchPass() {
+
+var inpass = document.forms[ "pass" ].elements[ "inpass" ].value;
+var validpass = "yahoo!";
+if( inpass == validpass ) location.href = "http://www.yahoo.co.jp";
+else alert( "パスワードが間違っています。" );
+
 }
-// -->
 </script>
 </head>
-<body onload="document.form1.id.focus();">
-<form action="#" name="form1">
-<table>
-<tr>
-<td align="right">ID (<u>U</u>)</td>
-<td><input type="text" name="id" value="" maxlength="12" accesskey="u"></td>
-</tr>
-<tr>
-<td>パスワード (<u>P</u>)</td>
-<td><input type="password" name="passwd" maxlength="8" accesskey="p" onkeydown="if (event.keyCode == 13) secret();"></td>
-</tr>
-<tr>
-<td colspan="2" align="right">
-<input type="button" value="認証" onclick="secret();">
-<input type="reset" value="取り消し">
-</td>
-</tr>
-</table>
+<body>
+<form name = "pass">
+<div>
+<input type = "text" value = "" name = "inpass">
+<input type = "button" value = "認証" onclick = "matchPass();">
+</div>
 </form>
 </body>
 </html>
+
+これをコピペしてメモ帳に張り付けて「好きな名前.html」で保存でおｋ。
+どういう風になるのかは試してください。
     <br>
     <br>
   </body>
